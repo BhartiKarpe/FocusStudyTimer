@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharti- FocusClock</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <!-- Optional: For icons, you could use Font Awesome. -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-left">
+            <span class="clock-logo">FocusClock</span>
+        </div>
+        <div class="header-right">
+            <!-- Example: Holiday -->
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="nav-item active" data-section="timer">
+                        <i class="icon">⏱️</i>
+                        Timer
+                    </li>
+                    <li class="nav-item" data-section="stopwatch">
+                        <i class="icon">⌚</i>
+                        Stopwatch
+                    </li>
+                    <li class="nav-item" data-section="current-time">
+                        <i class="icon">🕒</i>
+                        Clock
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <!-- The Powerful Quote -->
+            <div class="quote-container">
+                <p class="quote">"Time is your most precious currency; every second is a choice—spend it wisely."</p>
+            </div>
+
+            <!-- Timer Section (Default Visible) -->
+            <section id="timer-section" class="clock-section active">
+                <h3 class="section-title">Take a break</h3>
+                <div class="digital-display-container">
+                    <div id="timer-display" class="digital-display">00:00</div>
+                </div>
+                <div class="controls timer-controls">
+                    <!-- Initial buttons, or when stopped/reset -->
+                    <button id="timer-edit-btn" class="button blue-btn">Edit Timer</button>
+                    <button id="timer-reset-btn" class="button orange-btn">Reset</button>
+                    <button id="timer-start-btn" class="button green-btn">Start</button>
+
+                    <!-- Buttons that appear when timer is running/paused -->
+                    <button id="timer-pause-btn" class="button orange-btn hidden">Pause</button>
+                    <button id="timer-stop-btn" class="button blue-btn hidden">Stop</button>
+                </div>
+                <div id="timer-input-container" class="input-container hidden">
+                    <!-- Dropdowns for setting time -->
+                    <select id="timer-hours-select" class="time-select"></select>
+                    <span class="colon">:</span>
+                    <select id="timer-minutes-select" class="time-select"></select>
+                    <span class="colon">:</span>
+                    <select id="timer-seconds-select" class="time-select"></select>
+                    <button id="timer-set-btn" class="button blue-btn">Set</button>
+                    <button id="timer-cancel-btn" class="button orange-btn">Cancel</button>
+                </div>
+            </section>
+
+            <!-- Stopwatch Section -->
+            <section id="stopwatch-section" class="clock-section">
+                <h3 class="section-title">Stopwatch</h3>
+                <div class="digital-display-container">
+                    <div id="stopwatch-display" class="digital-display">00:00:00</div>
+                </div>
+                <div class="controls">
+                    <button id="stopwatch-start-btn" class="button green-btn">Start</button>
+                    <button id="stopwatch-stop-btn" class="button orange-btn">Stop</button>
+                    <button id="stopwatch-reset-btn-sw" class="button blue-btn">Reset</button>
+                </div>
+            </section>
+
+            <!-- Current Time Section -->
+            <section id="current-time-section" class="clock-section">
+                <h3 class="section-title">Current Time</h3>
+                <div class="digital-display-container">
+                    <div id="clock-display" class="digital-display">00:00:00</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="static/script.js" defer></script>
+</body>
+</html>
